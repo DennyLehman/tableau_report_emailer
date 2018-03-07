@@ -1,9 +1,7 @@
 "# This project pulls a tableau view from tableau online and emails the report out to a group of users." 
 # Tableau report Emailer
 
-This project demonstrates how to build a cash flow model using python data tools as an alternative to an excel based model. Dummy systems are setup with recurring payments, escalators, inservice dates, and various other initial conditions. A pandas dataframe is used to store the dates and cash flows of each system. A date range with the minimum starting inservice date through the maximum end date is constructed and used as the dataframe index. Each system name is stored as a column in the dateframe and cash flows are calculated based on the equation:
-cash_flow = recurring payment * (1 + escalator) ^ (number of years since inservice)
-Each system's cash flow is added to a cumulative sum for a npv calculation on the entire fleet. The project outputs the npv of the fleet.
+This project automates the refresh and distribution of Tableau report views via scheduled command line batch file and python files. Commmand line batch file to be scheduled with Task Scheduler. Execution of batch file runs two python scripts. One refreshes and prints Tableau workbook views as PDFs using tabcmd. Then another sends an email with the PDF attached. 
 
 ## Getting Started
 
